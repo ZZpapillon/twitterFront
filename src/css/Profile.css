@@ -1,0 +1,96 @@
+.profile-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: black;
+}
+
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Remove default border styles */
+.nav-tabs .nav-link {
+    border: none;
+}
+
+/* Remove active tab background and border styles */
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border-bottom: 4px solid #007bff;
+    /* Optional: if you want to keep the active tab indicator */
+}
+
+/* Set the tab text color */
+.nav-tabs .nav-link {
+    color: gray;
+    /* Set the color you want here */
+}
+
+/* Remove the tab background color */
+.nav-tabs {
+    background-color: transparent;
+}
+
+.editUserForm input, .editUserForm textarea {
+    background-color: black;
+    color: white;
+    border: 0.5px solid gray;
+}
+
+.editUserForm textarea:focus,
+.editUserForm input:focus {
+   border-color: #007bff;
+   background-color: black;
+}
+
+/* In your CSS file */
+.originalTweet {
+    border: 5px solid blue !important;
+}
+
+.replyTweet {
+    border: 2px solid blue !important;
+}
+
+.editUserForm ::placeholder {
+    color: gray;
+}
+.editUserForm input:focus, .editUserForm textarea:focus {
+    border-color: #007bff;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 576px) {
+  .tweetUrl-container, .content-container  {
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+  }
+  .profile-container {
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+  }
+.profile-tabs .nav-item {
+  padding: 0.5rem 0.2rem;
+}
+
+.profile-tabs .nav-link {
+  font-size: 0.85rem;
+  padding: 0!important;
+}
+.rowFollowers  {
+  font-size: 0.75rem;
+  display: flex;
+align-items: center;
+  
+  flex-wrap: nowrap;
+ 
+}
+.arrow {
+  font-size: 100px!important;
+}
+}

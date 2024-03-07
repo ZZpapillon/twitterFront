@@ -1,0 +1,123 @@
+.main-feed {
+   border-right: 1px solid gray;
+   height: 100vh;
+   overflow: auto;
+   scrollbar-width: 0px;
+}
+.content-container {
+    height: calc(100vh - 43px);
+    overflow: auto;
+    scrollbar-width: 0px;
+}
+.sticky-div {
+    position: sticky!important;
+    top: 0;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid grey;
+}
+/* Adjust the space between tabs */
+.mainfeed-tabs .nav-item {
+    margin-right: 20vw;
+   
+    /* Adjust the spacing as needed */
+}
+.mainfeed-tabs  {
+    border: none!important;
+    /* Adjust the spacing as needed */
+}
+
+/* Optional: Remove margin from the last tab to maintain alignment */
+.mainfeed-tabs .nav-item:last-child {
+    margin-right: 0;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    background-color: #000;
+    /* Black background */
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 1rem;
+   
+}
+
+.post-container .input-row {
+    display: flex;
+    align-items: center;
+    /* Aligns items horizontally center */
+    margin-bottom: 10px;
+    margin-left: 10px;
+    /* Space between the input row and the button */
+}
+
+.post-container .input-row .form-control {
+    flex-grow: 1;
+    /* Input field takes up remaining space */
+    background-color: #000;
+    /* Black background for input */
+    border: none;
+    /* No border for input */
+    color: white;
+    /* Text color for input */
+    margin-left: 10px;
+    /* Spacing between image and input group */
+   
+}
+.post-container .input-row .form-control:focus {
+    box-shadow: none;
+    /* Lighter text color for placeholder */
+}
+
+.post-container .input-row .form-control::placeholder {
+    color: #aaa;
+    /* Lighter text color for placeholder */
+}
+
+.post-container .button-row {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns button to the right */
+}
+
+#button-tweet {
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-right: 10px;
+}
+.feed {
+    min-height: fit-content;
+   
+}
+/* Styles the scrollbar itself (the handle) for both main-feed and content-container */
+.main-feed::-webkit-scrollbar, .content-container::-webkit-scrollbar {
+    width: 0px;
+    /* Makes the scrollbar thin */
+}
+
+/* Styles the background of the scrollbar track for both main-feed and content-container */
+.main-feed::-webkit-scrollbar-track, .content-container::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Makes the track background transparent */
+}
+
+/* Styles the draggable scrolling handle for both main-feed and content-container */
+.main-feed::-webkit-scrollbar-thumb, .content-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Makes the scrollbar handle dark but with reduced opacity */
+}
+
+/* Optionally, style it on hover to make it slightly more visible when needed for both main-feed and content-container */
+.main-feed::-webkit-scrollbar-thumb:hover, .content-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Darker on hover */
+}
+
+@media (min-width: 576px) and (max-width: 700px) {
+    .sticky-div {
+        font-size: 0.7rem;
+    }
+}
+

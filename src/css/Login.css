@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+.twitterBackground {
+    background-color: black;
+    height: 100vh;
+}
+
+.firstHeader {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.secondHeader {
+    
+    font-weight: 500;
+    color: white;
+}
+
+.px-5 input[type="email"],
+.px-5 input[type="text"],
+.px-5 input[type="password"] {
+    background-color: black;
+    border: 0.5px solid gray;
+    color: white;
+}
+
+.px-5 input[type="email"]:focus,
+.px-5 input[type="text"]:focus,
+.px-5 input[type="password"]:focus {
+    border-color: #007bff;
+    
+
+}

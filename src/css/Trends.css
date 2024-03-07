@@ -1,0 +1,186 @@
+
+
+
+.form-control-search {
+    background-color: rgb(35, 35, 35);
+    border-radius: 35px;
+    border: 0;
+    width: 100%;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    padding-left: 40px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 35px;
+}
+
+.input-icon-container {
+    position: absolute;
+    border-radius: 35px;
+    margin-left: 12px;
+    /* Adjust as needed */
+    z-index: 10;
+}
+
+.icon-focused {
+    color: #0d6efd;
+    /* Bootstrap 5 primary color, adjust if using a different version or theme */
+}
+
+.form-control-search:focus {
+    border: 1px solid #0d6efd;
+    box-shadow: none;
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+
+
+.userOnList {
+    
+    display: flex;
+    align-items: center;
+}
+ .subscribeCard,
+ .followCard,
+ .cardTrends {
+     margin-bottom: 3vh;
+     margin-top: 3vh;
+     /* Small margin between cards */
+ }
+
+
+@media (min-width: 576px) and (max-width: 1020px) {
+    .subscribeCard .card-body, .subscribeCard .card-title, .subscribeCard .card-text, .subscribeCard .btn,
+    .followCard .card-body, .followCard .card-title, .followCard .card-text, .followCard .btn,
+    .cardTrends .card-body, .cardTrends .card-title, .cardTrends .card-text, .cardTrends .btn {
+        font-size: 0.9rem;
+        /* Adjust font size as needed */
+    }
+
+    .subscribeCard img, .followCard img, .cardTrends img {
+        width: 80%;
+        /* Adjust image size as needed */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .subscribeCard, .followCard, .cardTrends {
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+        /* Small margin between cards */
+    }
+}
+
+.usersList {
+    width: 99%;
+    position: absolute;
+    top: 46px;
+    right: 0;
+    max-height: 40vh;
+    background-color: black;
+    text-align: start;
+    color: white;
+    font-size: 1.5rem;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    overflow-y: auto;
+    z-index: 1000;
+
+   
+}
+
+.usersList::-webkit-scrollbar {
+    width: 5px;
+}
+
+.usersList::-webkit-scrollbar-track {
+    background: black;
+    /* Light background color */
+}
+
+.usersList::-webkit-scrollbar-thumb {
+    background: #007bff;
+    /* Bootstrap primary color */
+    border-radius: 10px;
+}
+
+.usersList:-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+    /* Darker shade of Bootstrap primary color for hover effect */
+}
+
+.userOnList {
+    z-index: 9000;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.userOnList:hover {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 920px) {
+    .followCard,
+    .cardTrends,
+    .subscribeCard {
+        display: none!important;
+    }
+    .userOnList {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 576px) {
+    
+    /* Hide all content within the component */
+    .trends>.whatever>*:not(.sticky-input) {
+            display: none;
+        }
+
+    /* Make the input container visible */
+    .trends .sticky-input {
+        display: block;
+        position: absolute!important;
+        top: 10px;
+        left: 15vw;
+        right: 0;
+        /* Ensure it spans the full width */
+        z-index: 1000;
+        /* Make sure it's above other content */
+    }
+    
+
+    /* Ensure the input field itself is visible */
+    .trends .sticky-input .form-control-search {
+        display: block;
+       
+        width: 95%;
+        
+    }
+        .usersList {
+            width: 85%;
+            position: absolute;
+            top: 46px;
+            right: 9vw;
+        }
+}
+

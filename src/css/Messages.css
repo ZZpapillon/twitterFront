@@ -1,0 +1,210 @@
+/* Messages.css */
+
+.messages-panel {
+    width: 25vw;
+    /* Adjusted to 25% of the viewport width for demonstration */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -25vw;
+    /* Start hidden off-screen */
+    transition: left 0.5s ease-in-out;
+    /* Smooth transition */
+    z-index: 1050;
+    /* Ensure it's above most other content */
+    background-color: black;
+    color: white;
+    /* Assuming a white background */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.messages-panel.show {
+    left: 0;
+    /* Slide in to be fully visible */
+}
+
+/* Messages.css */
+.message-bubble {
+    position: relative;
+    
+    padding: 5px 45px 5px 10px;
+    /* Adjusted padding: top, right, bottom, left */
+    border-radius: 10px;
+    margin: 8px;
+    max-width: 80%;
+    
+    /* Aligns children with space between */
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    margin: 5px;
+}
+.message-content {
+    
+    display: block;
+    /* Ensures the content takes up the full width available */
+}
+.message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.6rem;
+    color: rgb(43, 43, 43);
+    margin-left: 10px;
+    /* Ensure it doesn't overlap with message content */
+}
+
+
+
+.other-user-message {
+    background-color: #f0f0f0;
+    color: black;
+    align-self: flex-start;
+    margin-right: auto;
+    padding: 5px 45px 5px 10px;
+    /* Adjusted padding for other user */
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    overflow-y: auto;
+    border: 0.5px solid #007bff;
+}
+
+.sendInput {
+  border-radius: 20px;
+  background-color: black!important;
+  border: 1px solid #007bff!important;
+  color: white!important;
+  padding: 10px;
+  margin: 0!important;
+  width: 100%;
+  border-radius: 20px;
+}
+.sendInput::placeholder {
+  color: white!important;
+}
+
+
+.conversation-entry {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.01px solid #007bff;
+    /* Adjust the color variable as needed */
+    padding: 20px;
+   
+    
+    /* Space between conversation entries */
+}
+
+.conversation-info {
+    flex-grow: 1;
+    margin-left: 10px;
+    /* Space between the image and the text */
+}
+
+.participant-names {
+    font-weight: bold;
+}
+
+.last-message {
+    font-size: 0.8rem;
+    /* Smaller font size for the last message */
+    color: #666;
+    /* Lighter text color for the last message */
+}
+
+.last-message-time {
+    margin-left: auto;
+    margin-bottom: 30px;
+    /* Pushes the time to the right */
+    font-size: 0.6rem;
+    color: #666;
+}
+
+.conversation-list {
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+/* Custom scrollbar for conversation list */
+.conversation-list::-webkit-scrollbar, .messages-container::-webkit-scrollbar, .listUsers::-webkit-scrollbar {
+  width: 5px;
+}
+
+.conversation-list::-webkit-scrollbar-track, .messages-container::-webkit-scrollbar-track, .listUsers::-webkit-scrollbar-track {
+  background: black; /* Light background color */
+}
+
+.conversation-list::-webkit-scrollbar-thumb, .messages-container::-webkit-scrollbar-thumb, .listUsers::-webkit-scrollbar-thumb {
+  background: #007bff; /* Bootstrap primary color */
+  border-radius: 10px;
+}
+
+.conversation-list::-webkit-scrollbar-thumb:hover, .messages-container::-webkit-scrollbar-thumb:hover, .listUsers::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Darker shade of Bootstrap primary color for hover effect */
+}
+
+
+.listUsers {
+  border: 0.5px solid #007bff;
+  position: absolute;
+  width: 25vw;
+  max-height: 20vh;
+  overflow-y: auto;
+ 
+}
+.last-message {
+    width: 16vw;
+    white-space: nowrap;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+}
+
+/* Media query for screens with a width of less than 576px */
+@media (max-width: 876px) {
+    .messages-panel {
+        z-index: 9999;
+        width: 75vw;
+        
+        /* Example: Adjust width to 75% of the viewport width */
+        left: -75vw;
+        /* Start hidden off-screen, adjusted to new width */
+    }
+    .messages-container {
+        max-height: 100%;
+    }
+    .imageHeader {
+        margin-left: 40px;
+    }
+    .listUsers {
+        width: 100%;
+        
+    }
+}
+
+@media (min-width: 876px) and (max-width: 1200px) {
+    .messages-panel {
+        z-index: 9999;
+        width: 50vw;
+
+        /* Example: Adjust width to 75% of the viewport width */
+        left: -50vw;
+        /* Start hidden off-screen, adjusted to new width */
+    }
+
+    .messages-container {
+        max-height: 100%;
+    }
+
+    .imageHeader {
+        margin-left: 40px;
+    }
+
+    .listUsers {
+        width: 100%;
+
+    }
+}

@@ -1,0 +1,201 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.sidebar-container {
+   
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    height: 100vh;
+    border-right: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    
+    /* Changed from row to column for correct item alignment */
+    
+}
+.links {
+    
+    height: 100vh;
+    
+}
+
+.nav-link:hover {
+    color: gray!important;
+}
+
+
+/* Style the list items */
+.sidebar-container .nav-link{
+    display: flex;
+    align-items: center;
+    place-items: center;
+    color: white;
+    border: none;
+   padding: 0.5rem 4rem;
+    max-width: fit-content;
+    background-color: black;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Style the icons */
+.sidebar-container .nav-link svg {
+    margin-right: 1rem;
+}
+
+/* Style the post button */
+.sidebar-post-btn {
+    width: 14vw;
+    height: 3.5rem;
+    border-radius: 100px!important;
+    /* Rounded corners */
+    
+    margin-top: 1rem;
+   
+   /* Position button to the right */
+}
+
+.sidebar-profile {
+    position: absolute;
+    bottom: 4vh;
+    left: 17.5%;
+    display: flex;
+    align-items: center;
+    padding: 10px 2rem 10px 10px;
+   
+    /* Add a top border */
+}
+
+.sidebar-profile:hover {
+    
+    background-color: rgb(34, 34, 34);
+    border-radius: 20px;
+  
+}
+
+.logout-option {
+  position: absolute;
+  top: -42px;
+  right: 15px;
+  height: fit-content;
+  font-size: 1rem;
+  width: 90%;
+  border: 0.5px solid gray;
+  border-radius: 20px;
+  background-color: black;
+  padding: 0.5rem 0rem;
+  
+}
+.profileRout:hover {
+  color: white!important;
+}
+/* Change the color of active links */
+.nav-link.active {
+    color: white!important;
+     
+    /* Or any color you prefer */
+}
+
+
+@media  (max-width: 1100px) {
+    .sidebar-profile .profile-info .profile-name, 
+    .sidebar-profile .profile-info .profile-handle {
+        font-size: 1rem; /* Adjust the font size smaller */
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar-container .nav-link {
+        font-size: 1rem; /* Make nav-links smaller */
+        padding: 0.5rem 2rem; /* Adjust padding for smaller screens */
+    }
+         .sidebar-profile .profile-info .profile-name,
+         .sidebar-profile .profile-info .profile-handle {
+             font-size: 0.7rem;
+             /* Adjust the font size smaller */
+         }
+}
+
+
+
+@media (max-width: 576px) {
+    .sidebar-container {
+     height: 10vh;
+    }
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    
+        /* Example to change the color and make the lines rounded */
+        .custom-toggler .navbar-toggler-icon {
+            filter: invert(50%);
+        }
+    
+        /* Additional styling for the Navbar.Toggle button itself, if needed */
+        .custom-toggler {
+            border: none;
+            /* Removes the default border */
+            /* Add more styles here as needed */
+        }
+   .navbar-toggler {
+       position: absolute;
+       top: 20px;
+       left: -9px;
+       z-index: 1051;
+       
+       /* Ensure it's above the sidebar content */
+   }
+
+  #sidebar-navbar-nav {
+       position: fixed;
+       border: 1px solid grey;
+       top: 10vh;
+       background-color: black;
+       left: 0;
+       width: 65%;
+       height: 90vh;
+       /* Adjust based on your preference */
+      
+       /* Allows scrolling if the content is taller than the screen */
+       z-index: 2000;
+      
+       overflow-y: auto;
+       overflow-x: hidden;
+       /* Ensure the sidebar is above other content but below the toggle button */
+   }
+   #sidebar-navbar-nav.expanded {
+       display: flex;
+       /* Only display flex when sidebar is expanded */
+       flex-direction: column;
+       align-items: start;
+       justify-content: start;
+   }
+   .sidebar-profile {
+      position: relative;
+       margin-top: 4rem;
+       bottom: 1rem;
+       left: 0.2rem;
+       
+   }
+  
+   .sidebar-post-btn {
+       width: 30vw;
+    
+      
+
+       /* Position button to the right */
+   }
+   .logo {
+    margin-left: 3rem;
+   }
+    
+}
+

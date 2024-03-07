@@ -1,0 +1,9 @@
+
+
+.tweetContent {
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  max-width: 100%;
+  word-break: break-word;
+}
+
