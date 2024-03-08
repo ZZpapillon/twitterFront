@@ -128,7 +128,7 @@ const randomUsers = useMemo(() => selectRandomUsers(allUsers, currentUserId, 3),
           key={user._id} 
           onClick={() => handleUserClick(user._id)} // Use the click handler here
         >
-        <Image className='ms-0 me-2' src={`http://localhost:3000${user.profilePicture}` || "https://via.placeholder.com/50"} roundedCircle  style={{width: '50px', height: '50px'}}/> {user.firstName} {user.lastName}
+        <Image className='ms-0 me-2' src={`https://twitternode.onrender.com${user.profilePicture}` || "https://via.placeholder.com/50"} roundedCircle  style={{width: '50px', height: '50px'}}/> {user.firstName} {user.lastName}
         </div> // Adjust based on your user object structure
           ))}
         </div>
