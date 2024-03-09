@@ -160,7 +160,7 @@ const handleExploreClick = (e) => {
            <Nav.Link as={RouterNavLink} className='m-0'  >
             <div className="sidebar-profile" onClick={handleProfilePictureClick}>
               <div className="profile-picture">
-                <Image src={currentUserInfo && currentUserInfo.profilePicture ? `https://twitternode.onrender.com${currentUserInfo.profilePicture}` : '/path/to/placeholder/image.jpg'} roundedCircle style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
+               <Image src={currentUserInfo && currentUserInfo.profilePicture ? currentUserInfo.profilePicture : '/path/to/placeholder/image.jpg'} roundedCircle style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
               </div>
               <div className="profile-info ms-3 mt-1">
                 <div className="profile-name ">{currentUserInfo ? (currentUserInfo.firstName + " " + currentUserInfo.lastName) : 'Loading...'}</div>
