@@ -98,7 +98,7 @@ const Trends = () => {
   // Shuffle the array of other users
   const shuffled = otherUsers.sort(() => 0.5 - Math.random());
 
-  // Get sub-array of first n elements after shuffled
+  // Get sub-array of first n elements after shuffled!!!
   return shuffled.slice(0, count);
 };
 
