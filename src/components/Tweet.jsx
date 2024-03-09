@@ -66,7 +66,7 @@ const TweetCard = ({tweet, style}) => {
           <div style={{ position: 'absolute',  top: '15px' }}>
             {/* Placeholder for profile image */}
             <img
-              src={`https://twitternode.onrender.com${tweet.author.profilePicture}`}
+              src={tweet.author.profilePicture}
               alt="Profile"
               style={{ borderRadius: '50%', width: '48px', height: '48px' }}
             />

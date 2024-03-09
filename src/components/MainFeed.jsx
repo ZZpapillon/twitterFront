@@ -116,7 +116,7 @@ const clearImagePreview = () => {
        
         
       <div className="input-row">
-        <Image src={currentUserInfo && currentUserInfo.profilePicture ? `https://twitternode.onrender.com${currentUserInfo.profilePicture}` : '/path/to/placeholder/image.jpg'} roundedCircle  style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
+        <Image src={currentUserInfo && currentUserInfo.profilePicture ? currentUserInfo.profilePicture : '/path/to/placeholder/image.jpg'} roundedCircle  style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
         <FormControl
           as="textarea"
           ref={tweetInputRef}

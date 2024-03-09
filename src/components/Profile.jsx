@@ -132,14 +132,14 @@ const handleFollowToggle = (userId) => {
         
       </Row>
       <div className='profile-container'>
-    <Image src={profileInfo && profileInfo.backgroundPicture ? `https://twitternode.onrender.com${profileInfo.backgroundPicture}` : "https://via.placeholder.com/100"} style={{height: '200px', width: '100%'}} alt="Background" fluid />
+    <Image src={profileInfo && profileInfo.backgroundPicture ? profileInfo.backgroundPicture : "https://via.placeholder.com/100"} style={{height: '200px', width: '100%'}} alt="Background" fluid />
       
       
 
      
       <Row className="align-items-center" style={{height: 'fit-content', backgroundColor: '#000', padding: '0px 0', margin: '0 0 0 0' }}>
         <Col className='ps-5' style={{margin: '-80px 0 0 -5px'}}>
-          <Image src={profileInfo && profileInfo.profilePicture ? `https://twitternode.onrender.com${profileInfo.profilePicture}` : "https://via.placeholder.com/150"} roundedCircle style={{ height: '150px', width: '150px', border: '3px solid black' }} />
+          <Image src={profileInfo && profileInfo.profilePicture ? profileInfo.profilePicture : "https://via.placeholder.com/150"} roundedCircle style={{ height: '150px', width: '150px', border: '3px solid black' }} />
        
           <h4 className='mt-2 mb-3 text-white'>{profileInfo ? (profileInfo.firstName + " " + profileInfo.lastName) : 'Loading...'}</h4>
           <div className='text-white mt-3' style={{ whiteSpace: 'pre-wrap' }}>{profileInfo ? profileInfo.bio : 'Loading...'}</div>

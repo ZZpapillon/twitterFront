@@ -111,7 +111,7 @@ useEffect(() => {
     
     <div className='post-container' style={{height: 'fit-content' , borderBottom: '0.5px solid gray', position: 'relative'}}>
       <div className="input-row">
-        <Image className='mb-3' src={`https://twitternode.onrender.com${currentUserInfo.profilePicture}`} roundedCircle  style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
+        <Image className='mb-3' src={currentUserInfo.profilePicture} roundedCircle  style={{width: '50px', height: '50px', objectFit: 'cover'}}/>
         <FormControl
           as="textarea"
           value={replyContent}

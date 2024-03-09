@@ -142,7 +142,7 @@ useEffect(() => {
     .join(', ');
 
   // Get profile pictures (assuming the first one for simplicity)
-  const profilePicture = otherParticipants.length ? `https://twitternode.onrender.com${otherParticipants[0].profilePicture}` : null;
+  const profilePicture = otherParticipants.length ? otherParticipants[0].profilePicture : null;
 
   return { participantNames, profilePicture };
 };
@@ -216,7 +216,7 @@ useEffect(() => {
   <ListGroup variant="flush" className='listUsers'>
     {filteredUsers.map(user => (
       <ListGroup.Item key={user._id} onClick={(e) => {e.preventDefault(); handleUserSelect(user);}} className="cursor-pointer" style={{ backgroundColor: 'black', color: 'white', border: 'none' }}>
-       <Image className='me-2 mb-1' src={`https://twitternode.onrender.com${user.profilePicture}`} style={{ width: '30px', height: '30px' }} roundedCircle />
+       <Image className='me-2 mb-1' src={user.profilePicture} style={{ width: '30px', height: '30px' }} roundedCircle />
       {user.firstName} {user.lastName}
       </ListGroup.Item>
     ))}

@@ -34,7 +34,7 @@ const FollowersModal = ({ show, onHide, accountId }) => {
         <ListGroup style={{backgroundColor: 'black', color: 'white'}}>
           {followers.map((follower) => (
             <ListGroup.Item key={follower._id} style={{backgroundColor: 'black', color: 'white', cursor: 'pointer'}} onClick={() => handleNavigate(follower._id)}>
-              <img  src={`https://twitternode.onrender.com${follower.profilePicture}`}  style={{ width: 50, height: 50, borderRadius: '50%', marginRight: '10px' }} />
+              <img  src={follower.profilePicture} style={{ width: 50, height: 50, borderRadius: '50%', marginRight: '10px' }} />
               {follower.firstName || "Unknown"} {follower.lastName || "Unknown"}
               
             </ListGroup.Item>

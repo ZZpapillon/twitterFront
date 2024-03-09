@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Modal, Button, ListGroup } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllUsers } from '../state/user';
+import { fetchAllUsers } from '../state/user'; 
 import { useNavigate } from 'react-router-dom';
 
 const FollowingModal = ({ show, onHide, accountId, handleFollowToggle }) => {
@@ -38,7 +38,7 @@ const FollowingModal = ({ show, onHide, accountId, handleFollowToggle }) => {
           {following.map((user) => (
             <ListGroup.Item key={user._id}  onClick={() => handleNavigate(user._id)} className="d-flex justify-content-between align-items-center" style={{backgroundColor: 'black', color: 'white', cursor: 'pointer'}}>
               <div className="d-flex align-items-center">
-                <img src={`https://twitternode.onrender.com${user.profilePicture}`} style={{ width: 50, height: 50, borderRadius: '50%', marginRight: '10px' }} />
+                <img src={user.profilePicture} style={{ width: 50, height: 50, borderRadius: '50%', marginRight: '10px' }} />
                 {user.firstName || "Unknown"} {user.lastName || "Unknown"}
               </div>
              

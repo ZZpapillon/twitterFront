@@ -128,7 +128,7 @@ const randomUsers = useMemo(() => selectRandomUsers(allUsers, currentUserId, 3),
           key={user._id} 
           onClick={() => handleUserClick(user._id)} // Use the click handler here
         >
-        <Image className='ms-0 me-2' src={`https://twitternode.onrender.com${user.profilePicture}` || "https://via.placeholder.com/50"} roundedCircle  style={{width: '50px', height: '50px'}}/> {user.firstName} {user.lastName}
+        <Image className='ms-0 me-2' src={user.profilePicture || "https://via.placeholder.com/50"} roundedCircle  style={{width: '50px', height: '50px'}}/> {user.firstName} {user.lastName}
         </div> // Adjust based on your user object structure
           ))}
         </div>
@@ -151,7 +151,7 @@ const randomUsers = useMemo(() => selectRandomUsers(allUsers, currentUserId, 3),
           <Card.Title className='mb-4'>Who to checkout:</Card.Title>
           {randomUsers.map((user) => (
             <div key={user._id} className="d-flex align-items-center  mb-3" onClick={() => handleUserClick(user._id)} style={{cursor: 'pointer'}}>
-              <Image className='ms-0' src={`https://twitternode.onrender.com${user.profilePicture}` || "https://via.placeholder.com/50"} roundedCircle  style={{width: '50px', height: '50px'}}/>
+              <Image className='ms-0' src={user.profilePicture || "https://via.placeholder.com/50"} roundedCircle  style={{width: '50px', height: '50px'}}/>
               <div className="ms-3" style={{fontSize: '1.3rem'}}>{user.firstName} {user.lastName}</div>
              
             </div>
