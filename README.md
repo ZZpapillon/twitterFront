@@ -6,7 +6,7 @@ This project is a full-stack clone of Twitter, designed to replicate the core fu
 
 ## Live Demo
 
-Check out the live demo here: [Live Website](https://messengerzz.netlify.app/) (Note: clicking will navigate away from this page)
+Check out the live demo here: [Live Website](https://stalwart-crostata-5ad996.netlify.app/) (Note: clicking will navigate away from this page)
 
 ## Backend Code Repo
 
