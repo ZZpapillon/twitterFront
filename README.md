@@ -1,5 +1,5 @@
 # Twitter
-[![Product Name Screen Shot](https://img.youtube.com/vi/kDngPhT2O84&t=95s/0.jpg)](https://www.youtube.com/watch?v=kDngPhT2O84&t=95s)
+[![Product Name Screen Shot](https://img.youtube.com/vi/kDngPhT2O84/0.jpg)](https://www.youtube.com/watch?v=kDngPhT2O84)
 
 This project is a full-stack clone of Twitter, designed to replicate the core functionalities of the popular social media platform. It allows users to share thoughts through tweets, interact with others via likes, retweets, and follows, and communicate directly through messages.
 
@@ -14,7 +14,7 @@ Check out the backend code repo here: [Backend Repo](https://github.com/ZZpapill
 
 ## Video Walkthrough
 
-Watch a video walkthrough of the Messenger here: [YouTube Video](https://www.youtube.com/watch?v=kDngPhT2O84&t=95s) (Note: clicking will navigate away from this page)
+Watch a video walkthrough of the Messenger here: [YouTube Video](https://www.youtube.com/watch?v=kDngPhT2O84) (Note: clicking will navigate away from this page)
 
 ## Features
 - **Tweet Posting**: Users can share updates, thoughts, and media.
